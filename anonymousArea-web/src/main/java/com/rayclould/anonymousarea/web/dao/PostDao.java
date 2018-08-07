@@ -21,10 +21,11 @@ public interface PostDao extends MongoRepository<Post, String> {
     Post findByTitle(String title);
 
 
+
     /**
      * 更新某些字段
      * @param post
      * @return
      */
-    Post update(Post post);
+//    Post update(Post post);
 }

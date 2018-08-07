@@ -40,6 +40,14 @@ public class UserController {
         return new Result<User>(user);
     }
 
+    @ApiOperation(value="获取用户信息", notes = "根据url的花名来获取用户详细信息")
+    @ApiImplicitParam(name = "stageName", value = "花名", required = true, dataType = "String")
+    @RequestMapping(value = "getByStageName/{stageName}", method = RequestMethod.GET)
+    public Result<User> getByStageName(@PathVariable("stageName") String stageName) {
+        User user = userService.findByStageName(stageName);
+        return new Result<User>(user);
+    }
+
     @RequestMapping(value = "findAll", method = RequestMethod.GET)
     public Result findAll() {
         return new Result<>(userService.findAll());

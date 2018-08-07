@@ -18,6 +18,7 @@ import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
+import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -57,9 +58,9 @@ public class AnonymousAreaWebMain {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("匿名区 APIs")
-                .description("Spring Boot 中使用 Swagger2 构建 RESTful APIs")
+                .description("基于 Spring Boot 使用 Swagger2 构建 RESTful APIs")
                 .termsOfServiceUrl("https://anonymer.cn")
-                .contact("南城")
+                .contact(new Contact("南城", "https://blog.csdn.net/sinat_36304803", "850795773@qq.com"))
                 .version("1.0")
                 .build();
     }

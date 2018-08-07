@@ -33,7 +33,7 @@ public interface UserService {
      * @param stageName
      * @return
      */
-    User findByName(String stageName);
+    User findByStageName(String stageName);
 
     /**
      * 添加
