@@ -1,5 +1,6 @@
 package com.rayclould.anonymousarea.web.service.impl;
 
+import com.mongodb.client.result.UpdateResult;
 import com.rayclould.anonymousarea.core.model.Post;
 import com.rayclould.anonymousarea.web.dao.PostDao;
 import com.rayclould.anonymousarea.web.service.PostService;
@@ -55,7 +56,7 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public Post update(Post post) {
-        return postDao.save(post);
+    public UpdateResult update(Post post) {
+        return postDao.update(post);
     }
 }

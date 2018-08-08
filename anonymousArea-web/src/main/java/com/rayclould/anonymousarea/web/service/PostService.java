@@ -1,6 +1,7 @@
 package com.rayclould.anonymousarea.web.service;
 
 
+import com.mongodb.client.result.UpdateResult;
 import com.rayclould.anonymousarea.core.model.Post;
 
 
@@ -57,6 +58,6 @@ public interface PostService {
      * @param post
      * @return
      */
-    Post update(Post post);
+    UpdateResult update(Post post);
 
 }

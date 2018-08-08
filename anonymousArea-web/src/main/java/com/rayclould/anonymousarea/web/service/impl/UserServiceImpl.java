@@ -1,8 +1,7 @@
 package com.rayclould.anonymousarea.web.service.impl;
 
 import com.rayclould.anonymousarea.core.model.User;
-import com.rayclould.anonymousarea.core.untils.IDUtil;
-import com.rayclould.anonymousarea.web.common.CheckUtil;
+import com.rayclould.anonymousarea.web.utils.CheckUtil;
 import com.rayclould.anonymousarea.web.dao.UserDao;
 import com.rayclould.anonymousarea.web.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

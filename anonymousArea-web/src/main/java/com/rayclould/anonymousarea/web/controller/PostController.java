@@ -2,12 +2,9 @@ package com.rayclould.anonymousarea.web.controller;
 
 import com.rayclould.anonymousarea.core.base.Result;
 import com.rayclould.anonymousarea.core.constant.CodeConst;
-import com.rayclould.anonymousarea.core.model.Comments;
 import com.rayclould.anonymousarea.core.model.Post;
-import com.rayclould.anonymousarea.core.model.User;
-import com.rayclould.anonymousarea.web.common.CheckUtil;
+import com.rayclould.anonymousarea.web.utils.CheckUtil;
 import com.rayclould.anonymousarea.web.service.PostService;
-import com.rayclould.anonymousarea.web.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;

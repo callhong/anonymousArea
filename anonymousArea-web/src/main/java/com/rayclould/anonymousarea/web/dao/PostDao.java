@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
  **/
 
 @Repository
-public interface PostDao extends MongoRepository<Post, String> {
+public interface PostDao extends MongoRepository<Post, String>, CustomRepository {
 
     /**
      * 根据标题查帖子
@@ -20,12 +20,4 @@ public interface PostDao extends MongoRepository<Post, String> {
      */
     Post findByTitle(String title);
 
-
-
-    /**
-     * 更新某些字段
-     * @param post
-     * @return
-     */
-//    Post update(Post post);
 }

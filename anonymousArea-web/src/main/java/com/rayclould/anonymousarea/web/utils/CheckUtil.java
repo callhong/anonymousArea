@@ -1,9 +1,7 @@
-package com.rayclould.anonymousarea.web.common;
+package com.rayclould.anonymousarea.web.utils;
 
-import com.rayclould.anonymousarea.core.base.Result;
 import com.rayclould.anonymousarea.core.model.Post;
 import com.rayclould.anonymousarea.core.model.User;
-import com.rayclould.anonymousarea.core.untils.IDUtil;
 
 import java.util.Date;
 
@@ -13,12 +11,7 @@ import java.util.Date;
  */
 public class CheckUtil {
     public static User beforeUserAdd(User user){
-//        if(user.getId() == null || "".equals(user.getId())){
-//            user.setId(IDUtil.getId());
-//        }
-        Date nowTime = new Date();
-        user.setCreateTime(nowTime);
-        user.setUpdateTime(nowTime);
+        user.setCreateTime(new Date());
         return user;
     }
 

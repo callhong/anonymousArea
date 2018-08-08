@@ -28,7 +28,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @Date: 2018/08/06
  */
 @Configuration
-@ComponentScan("com.rayclould")
+@ComponentScan("com.rayclould.anonymousarea")
 @EntityScan("com.rayclould.anonymousarea.*.model")
 @RestController
 @EnableSwagger2
