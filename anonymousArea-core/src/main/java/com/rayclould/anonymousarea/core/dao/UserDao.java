@@ -1,4 +1,4 @@
-package com.rayclould.anonymousarea.web.dao;
+package com.rayclould.anonymousarea.core.dao;
 
 import com.rayclould.anonymousarea.core.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;

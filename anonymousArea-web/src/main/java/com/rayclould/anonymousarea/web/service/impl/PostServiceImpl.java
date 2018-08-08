@@ -1,8 +1,8 @@
 package com.rayclould.anonymousarea.web.service.impl;
 
 import com.mongodb.client.result.UpdateResult;
+import com.rayclould.anonymousarea.core.dao.PostDao;
 import com.rayclould.anonymousarea.core.model.Post;
-import com.rayclould.anonymousarea.web.dao.PostDao;
 import com.rayclould.anonymousarea.web.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,12 +17,13 @@ import java.util.Optional;
 
 @Service
 public class PostServiceImpl implements PostService {
-    private final PostDao postDao;
-
     @Autowired
-    public PostServiceImpl(PostDao postDao) {
-        this.postDao = postDao;
-    }
+    private PostDao postDao;
+
+//    @Autowired
+//    public PostServiceImpl(PostDao postDao) {
+//        this.postDao = postDao;
+//    }
 
     @Override
     public List<Post> findAll() {
@@ -55,8 +56,10 @@ public class PostServiceImpl implements PostService {
         postDao.delete(optional.get());
     }
 
+
     @Override
     public UpdateResult update(Post post) {
-        return postDao.update(post);
+//        return postDao.update(post);
+        return null;
     }
 }

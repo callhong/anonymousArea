@@ -1,8 +1,10 @@
 package com.rayclould.anonymousarea.web;
 
 import io.swagger.annotations.ApiOperation;
+import org.mapstruct.Mapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
@@ -28,11 +30,13 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @Date: 2018/08/06
  */
 @Configuration
-@ComponentScan("com.rayclould.anonymousarea")
-@EntityScan("com.rayclould.anonymousarea.*.model")
+//@ComponentScan("com.rayclould.anonymousarea")
+@ComponentScan(basePackages = {"com.rayclould.anonymousarea.web", "com.rayclould.anonymousarea.core.dao"})
+//@EntityScan("com.rayclould.anonymousarea.*.model")
 @RestController
 @EnableSwagger2
 @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+//@SpringBootApplication(scanBasePackages = "com.rayclould")
 public class AnonymousAreaWebMain {
     public static void main(String[] args) {
         SpringApplication.run(AnonymousAreaWebMain.class,args);

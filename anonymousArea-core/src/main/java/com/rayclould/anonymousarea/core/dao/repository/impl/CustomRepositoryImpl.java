@@ -1,8 +1,8 @@
-package com.rayclould.anonymousarea.web.dao.impl;
+package com.rayclould.anonymousarea.core.dao.repository.impl;
 
 import com.mongodb.client.result.UpdateResult;
+import com.rayclould.anonymousarea.core.dao.repository.CustomRepository;
 import com.rayclould.anonymousarea.core.model.Post;
-import com.rayclould.anonymousarea.web.dao.CustomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;

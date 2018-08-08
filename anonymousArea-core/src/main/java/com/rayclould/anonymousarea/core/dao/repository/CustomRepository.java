@@ -1,4 +1,4 @@
-package com.rayclould.anonymousarea.web.dao;
+package com.rayclould.anonymousarea.core.dao.repository;
 
 import com.mongodb.client.result.UpdateResult;
 import com.rayclould.anonymousarea.core.model.Post;

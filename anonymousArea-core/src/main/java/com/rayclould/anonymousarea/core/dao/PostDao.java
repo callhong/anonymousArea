@@ -1,5 +1,6 @@
-package com.rayclould.anonymousarea.web.dao;
+package com.rayclould.anonymousarea.core.dao;
 
+import com.rayclould.anonymousarea.core.dao.repository.CustomRepository;
 import com.rayclould.anonymousarea.core.model.Post;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Repository;
  **/
 
 @Repository
-public interface PostDao extends MongoRepository<Post, String>, CustomRepository {
+public interface PostDao extends MongoRepository<Post, String> {
 
     /**
      * 根据标题查帖子
