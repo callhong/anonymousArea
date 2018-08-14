@@ -19,8 +19,8 @@ public enum CodeConst {
     TIME_PASSED(996, "时间己过期"),
     USER_NOT_FOUND(997, "找不到用户"),
     USER_REPEAT(998, "用户重复"),
-    AUTH_FAILED(999, "用户名或密码错误");
-
+    AUTH_FAILED(999, "用户名或密码错误"),
+    PARAMETER_ERROR(1000, "参数错误");
 
     private int resultCode;
     private String message;

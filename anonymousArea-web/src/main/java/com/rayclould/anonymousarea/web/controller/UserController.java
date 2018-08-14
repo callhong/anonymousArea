@@ -3,7 +3,7 @@ package com.rayclould.anonymousarea.web.controller;
 import com.rayclould.anonymousarea.core.base.Result;
 import com.rayclould.anonymousarea.core.constant.CodeConst;
 import com.rayclould.anonymousarea.core.model.User;
-import com.rayclould.anonymousarea.web.utils.CheckUtil;
+import com.rayclould.anonymousarea.web.common.utils.CheckUtil;
 import com.rayclould.anonymousarea.web.service.UserService;
 
 
@@ -35,7 +35,7 @@ public class UserController {
     @ApiOperation(value="获取用户信息", notes = "根据url的id来获取用户详细信息")
     @ApiImplicitParam(name = "id", value = "用户ID", required = true, dataType = "Long")
     @RequestMapping(value = "get/{id}", method = RequestMethod.GET)
-    public Result<User> get(@PathVariable("id") Long id) {
+    public Result<User> get(@PathVariable("id") String id) {
         User user = userService.findById(id);
         return new Result<User>(user);
     }
@@ -69,7 +69,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
-    public Result delete(@PathVariable("id") Long id) {
+    public Result delete(@PathVariable("id") String id) {
         userService.delete(id);
         return new Result(CodeConst.SUCCESS.getResultCode(), CodeConst.SUCCESS.getMessage());
     }

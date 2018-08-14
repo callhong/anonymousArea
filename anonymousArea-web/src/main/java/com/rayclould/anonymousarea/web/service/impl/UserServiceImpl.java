@@ -1,8 +1,8 @@
 package com.rayclould.anonymousarea.web.service.impl;
 
-import com.rayclould.anonymousarea.core.dao.UserDao;
 import com.rayclould.anonymousarea.core.model.User;
-import com.rayclould.anonymousarea.web.utils.CheckUtil;
+import com.rayclould.anonymousarea.web.common.utils.CheckUtil;
+import com.rayclould.anonymousarea.web.dao.UserDao;
 import com.rayclould.anonymousarea.web.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User findById(Long id) {
+    public User findById(String id) {
         Optional<User> optionalUser = userDao.findById(id);
         return optionalUser.orElse(null);
     }
@@ -47,7 +47,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void delete(Long id) {
+    public void delete(String id) {
         Optional<User> optional = userDao.findById(id);
         if (!optional.isPresent()) {
             return;

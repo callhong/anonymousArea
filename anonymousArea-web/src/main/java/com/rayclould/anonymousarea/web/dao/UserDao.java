@@ -1,6 +1,7 @@
-package com.rayclould.anonymousarea.core.dao;
+package com.rayclould.anonymousarea.web.dao;
 
 import com.rayclould.anonymousarea.core.model.User;
+import com.rayclould.anonymousarea.web.dao.repository.CustomRepository;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Repository;
  **/
 
 @Repository
-public interface UserDao extends MongoRepository<User, Long> {
+public interface UserDao extends MongoRepository<User, String>, CustomRepository {
 
     /**
      * 根据字字查用户

@@ -22,9 +22,6 @@ public abstract class BaseModel implements Serializable {
     @Id
     private String id;
 
-    @ApiModelProperty(value = "名称")
-    private String name;
-
     @ApiModelProperty(value = "创建时间")
     private Date createTime;
 

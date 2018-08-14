@@ -2,6 +2,7 @@ package com.rayclould.anonymousarea.web.service;
 
 
 import com.mongodb.client.result.UpdateResult;
+import com.rayclould.anonymousarea.core.model.Comments;
 import com.rayclould.anonymousarea.core.model.Post;
 
 

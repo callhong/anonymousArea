@@ -25,7 +25,7 @@ public interface UserService {
      * @param id
      * @return
      */
-    User findById(Long id);
+    User findById(String id);
 
     /**
      * 根据名字查
@@ -48,7 +48,7 @@ public interface UserService {
      *
      * @param id
      */
-    void delete(Long id);
+    void delete(String id);
 
     /**
      * 更新

@@ -1,7 +1,8 @@
-package com.rayclould.anonymousarea.core.dao;
+package com.rayclould.anonymousarea.web.dao;
 
-import com.rayclould.anonymousarea.core.dao.repository.CustomRepository;
+import com.mongodb.client.result.UpdateResult;
 import com.rayclould.anonymousarea.core.model.Post;
+import com.rayclould.anonymousarea.web.dao.repository.CustomRepository;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
@@ -11,14 +12,9 @@ import org.springframework.stereotype.Repository;
  **/
 
 @Repository
-public interface PostDao extends MongoRepository<Post, String> {
+public interface PostDao extends MongoRepository<Post, String>, CustomRepository{
 
-    /**
-     * 根据标题查帖子
-     *
-     * @param title
-     * @return
-     */
     Post findByTitle(String title);
 
+//长继承
 }

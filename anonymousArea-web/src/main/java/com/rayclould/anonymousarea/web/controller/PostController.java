@@ -2,25 +2,24 @@ package com.rayclould.anonymousarea.web.controller;
 
 import com.rayclould.anonymousarea.core.base.Result;
 import com.rayclould.anonymousarea.core.constant.CodeConst;
+import com.rayclould.anonymousarea.core.model.Comments;
 import com.rayclould.anonymousarea.core.model.Post;
-import com.rayclould.anonymousarea.web.utils.CheckUtil;
+import com.rayclould.anonymousarea.web.common.utils.CheckUtil;
 import com.rayclould.anonymousarea.web.service.PostService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author: nanCheng
  * @Date: 2018/08/06
  */
-
 @RestController
 @RequestMapping("post")
-//@Api("mongodb測試-")
 @Api(value = "/v1/Posts",tags = "Posts",description = "帖子接口_V1")
-
 public class PostController {
 
     private final PostService postService;
@@ -64,6 +63,5 @@ public class PostController {
         postService.delete(id);
         return new Result(CodeConst.SUCCESS.getResultCode(), CodeConst.SUCCESS.getMessage());
     }
-
 
 }

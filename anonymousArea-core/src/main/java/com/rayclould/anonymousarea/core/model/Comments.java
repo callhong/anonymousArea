@@ -24,19 +24,34 @@ import java.util.List;
 @ApiModel(value = "Comments", description = "评论对象")
 public class Comments<T> extends BaseModel implements Serializable{
 
+    @ApiModelProperty(value = "评论Id")
+    private String commentId;
+
+    @ApiModelProperty(value = "帖子Id")
+    private String postId;
+
+    @ApiModelProperty(value = "回复Id")
+    private String replyId;
+
     @ApiModelProperty(value = "用户Id")
-    private String UserId;
+    private String userId;
 
     @ApiModelProperty(value = "用户名称")
-    private String UserName;
+    private String userName;
+
+    @ApiModelProperty(value = "用户头像")
+    private String userPictures;
 
     @ApiModelProperty(value = "评论内容")
-    private Long content;
+    private String content;
+
+    @ApiModelProperty(value = "评论图片")
+    private List<String> imgUrl;
 
     @ApiModelProperty(value = "点赞数")
-    private int Likes;
+    private int likes;
 
     @ApiModelProperty(value = "回复")
-    private T data;
+    private T replys;
 
 }

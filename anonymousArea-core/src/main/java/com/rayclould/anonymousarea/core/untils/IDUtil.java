@@ -31,7 +31,7 @@ public class IDUtil {
      *
      * @return long
      */
-    public static long getId() {
+    public static String getId() {
         int tempId;
         long tempCurSec = System.currentTimeMillis() / 1000L;
         synchronized (ID_LOCK) {
@@ -48,7 +48,7 @@ public class IDUtil {
                 tempCurSec = CURRENT_SECOND;
             }
         }
-        return ((tempCurSec) << 16 | tempId & 0xFFFF);
+        return String.valueOf(((tempCurSec) << 16 | tempId & 0xFFFF));
     }
 
 }
