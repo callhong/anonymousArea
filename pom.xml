@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.raycloud</groupId>
+	<groupId>com.nancheng</groupId>
 	<artifactId>anonymousArea</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<modules>
@@ -18,7 +18,7 @@
 	<developers>
 		<developer>
 			<name>nancheng</name>
-			<email>nancheng.lh@raycloud.com</email>
+			<email>linghong0912@gmail.com</email>
 		</developer>
 	</developers>
 
@@ -59,7 +59,7 @@
 		<!-- mail -->
 		<javax-mail.version>1.4.7</javax-mail.version>
 		<!-- lomlok -->
-		<lombak.version>1.16.10</lombak.version>
+		<lombok.version>1.16.10</lombok.version>
 		<!-- api文档 -->
 		<springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
 		<!-- mybatis -->
@@ -76,7 +76,7 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>com.raycloud</groupId>
+				<groupId>com.nancheng</groupId>
 				<artifactId>anonymousArea-core</artifactId>
 				<version>${version}</version>
 			</dependency>
@@ -137,7 +137,7 @@
 			<dependency>
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
-				<version>${lombak.version}</version>
+				<version>${lombok.version}</version>
 			</dependency>
 			<!-- Swagger -->
 			<dependency>
